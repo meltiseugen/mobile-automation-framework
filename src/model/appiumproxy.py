@@ -3,11 +3,10 @@ An API used to directly start and interact with an Appium Process from Python.
 The main class that provides this functionality is the Appium class.
 """
 import os
+import subprocess
 import time
 
-import subprocess
-
-from model.base_proxy import BaseProxy
+from src.model import BaseProxy
 
 
 class Appium(BaseProxy, object):

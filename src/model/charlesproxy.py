@@ -1,8 +1,7 @@
 import subprocess
 import time
 
-# from BeautifulSoup import BeautifulSoup
-from model.base_proxy import BaseProxy
+from src.model import BaseProxy
 
 
 class Charles(BaseProxy):

@@ -2,10 +2,10 @@
 A file that holds the main flow of the project.
 """
 
-import unittest
 import sys
+import unittest
 
-from testComponents.test_android import TestAndroid
+from src.testComponents.test_android import TestAndroid
 
 if __name__ == '__main__':
     """

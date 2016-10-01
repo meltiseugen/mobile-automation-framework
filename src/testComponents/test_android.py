@@ -3,14 +3,15 @@ Test file for the Android version of SpotOn application.
 It contains the tests for: Sliding menu, Number picker, Log in, Log out, Test POIs and Menu walk-through.
 """
 
-import unittest
-import time
 import os
+import time
+import unittest
 
-from controller.actions import Actions
 from model import appiumproxy
 from model.connection import AppiumConnection
-from model.device import Device
+
+from src.controller.actions import Actions
+from src.model.device import Device
 
 
 class TestAndroid(unittest.TestCase):
