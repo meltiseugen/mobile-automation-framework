@@ -1,0 +1,66 @@
+import subprocess
+import time
+
+# from BeautifulSoup import BeautifulSoup
+from model.base_proxy import BaseProxy
+
+
+class Charles(BaseProxy):
+
+    URL_OF_SESSION_XML = "http://control.charles/session/export-xml"
+    URL_OF_SESSION_HAR = "http://control.charles/session/export-har"
+    URL_OF_SESSION_CSV = "http://control.charles/session/export-csv"
+
+    SESSION_XML_FORMAT = "export-xml"
+    SESSION_HAR_FORMAT = "export-har"
+    SESSION_CSV_FORMAT = "export-csv"
+
+    def __init__(self, path_to_bin, params):
+        super(Charles, self).__init__(path_to_bin, None, params)
+
+    def start(self):
+        super(Charles, self).start()
+
+    def record(self, time_to_wait=5):
+        def record_process():
+            shell_comm = "curl --silent -x localhost:8880 http://control.charles/recording/start > /dev/null"
+            process = subprocess.Popen(shell_comm,
+                                       shell=True,
+                                       stdout=subprocess.PIPE,
+                                       stderr=subprocess.PIPE
+                                       )
+            process.communicate()
+        for _ in range(time_to_wait):
+            record_process()
+            time.sleep(1)
+
+    def save_session(self, directory_path, file_name, format_type="export-xml"):
+        shell_comm = "curl -x localhost:8880 http://control.charles/session/"+format_type+" -o "+directory_path+"/"+file_name+" "
+        print shell_comm
+        process = subprocess.Popen(shell_comm,
+                                   shell=True,
+                                   stdout=subprocess.PIPE,
+                                   stderr=subprocess.PIPE
+                                   )
+        process.communicate()
+
+
+# class MyCharlesProxy(Charles):
+#
+#     def get_response(self, format_type="export-xml", **kargs):
+#         shell_comm = "curl --silent -x localhost:8880 http://control.charles/session/" + format_type
+#         process = subprocess.Popen(shell_comm,
+#                                    shell=True,
+#                                    stdout=subprocess.PIPE,
+#                                    stderr=subprocess.PIPE
+#                                    )
+#         if format_type == Charles.SESSION_XML_FORMAT:
+#             out, err = process.communicate()
+#             soup = BeautifulSoup(out)
+#             if "tag" in kargs:
+#                 if "tag_index" in kargs:
+#                     request = str(soup.findAll(kargs.get("tag"), kargs.get("attrs"))[kargs.get("tag_index")])
+#                     return request
+#                 else:
+#                     request = str(soup.findAll(kargs.get("tag"), kargs.get("attrs")))
+#                     return request
