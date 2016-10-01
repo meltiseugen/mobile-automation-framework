@@ -31,12 +31,12 @@ class TestAndroid(unittest.TestCase):
         appium = appiumproxy.Appium.get_remote_appium()
         appium.start(initial_wait_time=15)
         print "inner appium started"
-        device = Device(ui_elements_file=os.getcwd()+"/resources/ui_elements.json",
+        device = Device(ui_elements_file=os.getcwd()+"/../resources/ui_elements.json",
                         device_type="Android"
                        )
         try:
             connection = AppiumConnection(url="http://localhost:4444/wd/hub",
-                                          connection_file=os.getcwd()+"/resources/device_data.json",
+                                          connection_file=os.getcwd()+"/../resources/device_data.json",
                                           device_type="Android"
                                          )
         except Exception as e:
@@ -44,7 +44,7 @@ class TestAndroid(unittest.TestCase):
             appium.kill_process()
             appium.start(initial_wait_time=15)
             connection = AppiumConnection(url="http://localhost:4444/wd/hub",
-                                          connection_file=os.getcwd() + "/resources/device_data.json",
+                                          connection_file=os.getcwd() + "/../resources/device_data.json",
                                           device_type="Android"
                                           )
         actions = Actions(device, connection)
@@ -269,7 +269,7 @@ class TestAndroid(unittest.TestCase):
 
         def test_flow_one():
             test_login()
-            test_menu_walkthrough()
+            # test_menu_walkthrough()
             # test_pois()
             # time.sleep(2)
             # print "click on menu"

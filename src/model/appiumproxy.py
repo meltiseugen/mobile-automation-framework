@@ -6,7 +6,7 @@ import os
 import subprocess
 import time
 
-from src.model import BaseProxy
+from src.model.base_proxy import BaseProxy
 
 
 class Appium(BaseProxy, object):
