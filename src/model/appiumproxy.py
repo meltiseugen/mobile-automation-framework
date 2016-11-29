@@ -6,6 +6,7 @@ import os
 import subprocess
 import time
 
+from src.StaticResources.StaticData import StaticData
 from src.model.base_proxy import BaseProxy
 
 
@@ -50,7 +51,7 @@ class Appium(BaseProxy, object):
             time.sleep(initial_wait_time)
 
         else:
-            print "cleaning and restarting"
+            print("cleaning and restarting")
             self.kill_process()
             super(Appium, self).start()
             time.sleep(initial_wait_time)
@@ -59,7 +60,7 @@ class Appium(BaseProxy, object):
         with open(self.__output, "r") as out_file:
             text = out_file.read()
             if "error" in text or "Error" in text:
-                print "found error"
+                print("found error")
                 return False
         return True
 
@@ -67,24 +68,24 @@ class Appium(BaseProxy, object):
         shell_comm = "kill -kill `lsof -t -i tcp:" + self.__port + "`"
         process = subprocess.Popen(shell_comm, shell=True)
         process.communicate()
-        print "killed process"
+        print("killed process")
         time.sleep(5)
 
     @staticmethod
     def get_local_appium():
         return Appium("node",
-                      ["/Applications/Appium.app/Contents/Resources/node_modules/appium/build/lib/main.js",
-                       "--port", "4444",
+                      [StaticData.Config.Appium.PATH,
+                       "--port", StaticData.Config.Appium.PORT,
                        "--debug-log-spacing"
                        ],
-                      os.getcwd() + "/outputs/appium-out-file.txt"
+                      StaticData.Paths.OUTPUTS_PATH + "appium-out-file.txt"
                       )
 
     @staticmethod
     def get_remote_appium():
         return Appium("appium",
-                       ["--port", "4444",
+                       ["--port", StaticData.Config.Appium.PORT,
                         "--debug-log-spacing"
                         ],
-                       os.getcwd() + "/outputs/appium-out-file.txt"
+                       StaticData.Paths.OUTPUTS_PATH + "appium-out-file.txt"
                        )
