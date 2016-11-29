@@ -10,13 +10,13 @@ class UITextBox(UIObject):
     UITextBox definitions.
     """
 
-    def __init__(self, controller, element_tag):
+    def __init__(self, controller, element_tag=None, xpath=None):
         """
         Constructor.
         :param controller:
         :param element_tag:
         """
-        super(UITextBox, self).__init__(controller, element_tag)
+        super(UITextBox, self).__init__(controller, element_tag, xpath)
 
     def click(self):
         """

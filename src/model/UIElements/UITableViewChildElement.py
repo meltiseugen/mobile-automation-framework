@@ -1,11 +1,8 @@
-"""
-Module for degining a UIButton object.
-"""
 from src.StaticResources.StaticData import StaticData
 from src.model.UIElements.UIObject import UIObject
 
 
-class UIButton(UIObject):
+class UITableViewChildElement(UIObject):
     """
     UIButton object definitions.
     """
@@ -15,7 +12,7 @@ class UIButton(UIObject):
         :param controller:
         :param element_tag:
         """
-        super(UIButton, self).__init__(controller, element_tag, xpath)
+        super(UITableViewChildElement, self).__init__(controller, element_tag, xpath)
 
     def click(self):
         """

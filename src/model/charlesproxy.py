@@ -1,7 +1,7 @@
 import subprocess
 import time
 
-from src.model import BaseProxy
+from src.model.base_proxy import BaseProxy
 
 
 class Charles(BaseProxy):
@@ -35,31 +35,10 @@ class Charles(BaseProxy):
 
     def save_session(self, directory_path, file_name, format_type="export-xml"):
         shell_comm = "curl -x localhost:8880 http://control.charles/session/"+format_type+" -o "+directory_path+"/"+file_name+" "
-        print shell_comm
+        print(shell_comm)
         process = subprocess.Popen(shell_comm,
                                    shell=True,
                                    stdout=subprocess.PIPE,
                                    stderr=subprocess.PIPE
                                    )
         process.communicate()
-
-
-# class MyCharlesProxy(Charles):
-#
-#     def get_response(self, format_type="export-xml", **kargs):
-#         shell_comm = "curl --silent -x localhost:8880 http://control.charles/session/" + format_type
-#         process = subprocess.Popen(shell_comm,
-#                                    shell=True,
-#                                    stdout=subprocess.PIPE,
-#                                    stderr=subprocess.PIPE
-#                                    )
-#         if format_type == Charles.SESSION_XML_FORMAT:
-#             out, err = process.communicate()
-#             soup = BeautifulSoup(out)
-#             if "tag" in kargs:
-#                 if "tag_index" in kargs:
-#                     request = str(soup.findAll(kargs.get("tag"), kargs.get("attrs"))[kargs.get("tag_index")])
-#                     return request
-#                 else:
-#                     request = str(soup.findAll(kargs.get("tag"), kargs.get("attrs")))
-#                     return request

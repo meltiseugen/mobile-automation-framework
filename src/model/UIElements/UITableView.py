@@ -3,6 +3,7 @@ Module for defining a UITableView object.
 """
 from src.model.Exceptions.UIExceptions import TableChildIndexOutOfRange, NoSuchUIElement
 from src.model.UIElements.UIObject import UIObject
+from src.model.UIElements.UITableViewChildElement import UITableViewChildElement
 
 
 class UITableView(UIObject):
@@ -10,9 +11,9 @@ class UITableView(UIObject):
     UITableView definitions.
     """
 
-    def __init__(self, controller, element_tag, child_pattern):
+    def __init__(self, controller, child_pattern, element_tag=None, xpath=None):
         """Constructor."""
-        super(UITableView, self).__init__(controller, element_tag)
+        super(UITableView, self).__init__(controller, element_tag, xpath)
         self.__child_pattern = child_pattern
         self.__CHILDREN_COUNT = self.__count_children()
 
@@ -53,5 +54,4 @@ class UITableView(UIObject):
         if child_index < 0 or child_index >= self.__CHILDREN_COUNT:
             raise TableChildIndexOutOfRange()
         __child_xpath = self.__generate_child_xpath(self._element_tag, self.__child_pattern, child_index)
-        # TODO TableViewChildElement.
-        return self.__main_controller.APPIUM.get_element_by_xpath(__child_xpath)
+        return UITableViewChildElement(self.__main_controller, xpath=__child_xpath)

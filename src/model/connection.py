@@ -62,7 +62,7 @@ class AppiumConnection(object):
         result = result[new_line_index+1:]
         first_space = result.find("\t")
         result = result[:first_space]
-        print "Found device with udid: " + str(result)
+        print("Found device with udid: " + str(result))
         return result
 
     def close_connection(self):
@@ -96,7 +96,7 @@ class AppiumConnection(object):
         try:
             self.get_element(xpath).click()
         except Exception as nsee:
-            print nsee
+            print(nsee)
 
     def click(self, element):
         """
