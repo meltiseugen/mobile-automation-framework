@@ -26,8 +26,7 @@ class Charles(BaseProxy):
             process = subprocess.Popen(shell_comm,
                                        shell=True,
                                        stdout=subprocess.PIPE,
-                                       stderr=subprocess.PIPE
-                                       )
+                                       stderr=subprocess.PIPE)
             process.communicate()
         for _ in range(time_to_wait):
             record_process()
@@ -39,6 +38,5 @@ class Charles(BaseProxy):
         process = subprocess.Popen(shell_comm,
                                    shell=True,
                                    stdout=subprocess.PIPE,
-                                   stderr=subprocess.PIPE
-                                   )
+                                   stderr=subprocess.PIPE)
         process.communicate()

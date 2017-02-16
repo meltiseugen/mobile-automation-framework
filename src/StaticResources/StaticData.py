@@ -37,6 +37,8 @@ class StaticData(object):
         RESOURCE_PATH = Paths.PROJECT_PATH + "resources/"
         OUTPUTS_PATH = Paths.PROJECT_PATH + "outputs/"
         SOURCE_PATH = Paths.PROJECT_PATH + "src/"
+        DEVICE_DATA_PATH = RESOURCE_PATH + "device_data.json"
+        UI_ELEMENTS_PATH = RESOURCE_PATH + "ui_elements.json"
 
     class Config(object):
         """
@@ -48,6 +50,7 @@ class StaticData(object):
         class Appium(object):
             PATH = "/Applications/Appium.app/Contents/Resources/node_modules/appium/build/lib/main.js"
             PORT = "4444"
+            SERVER_URL = ""
 
     class Errors(object):
         """
@@ -70,6 +73,3 @@ class StaticData(object):
             Static values of the UI elements related to android.
             """
             DEFAULT_PATH = "devices.android.app_name.default_path"
-
-if __name__ == "__main__":
-    print(StaticData.Paths.PROJECT_PATH)

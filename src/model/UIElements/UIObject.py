@@ -27,19 +27,15 @@ class UIObject(object):
 
         :return:
         """
-        if self._element_tag is not None:
-            __xpath = self.__main_controller.FILE_COMMANDER.get_element_xpath(self._element_tag)
-        else:
-            __xpath = self._xpath
         try:
-            self._element = self.__main_controller.APPIUM.get_element_by_xpath(__xpath)
+            self._element = self.__main_controller.APPIUM.get_element(self._element_tag)
         except NoSuchUIElement:
             i = 0
             success = False
             while i < StaticData.Errors.RETRY_NUMBER and not success:
                 time.sleep(StaticData.Waits.SMALL_SLEEP_TIME)
                 try:
-                    self._element = self.__main_controller.APPIUM.get_element_by_xpath(__xpath)
+                    self._element = self.__main_controller.APPIUM.get_element(self._element_tag)
                     success = True
                     break
                 except NoSuchUIElement:
@@ -47,6 +43,12 @@ class UIObject(object):
                 i += 1
             if not success:
                 raise NoSuchUIElement()
+
+    def is_visible(self):
+        return self._element.is_displayed()
+
+    def is_enabled(self):
+        return self._element.is_enabled()
 
     def get_attribute(self, name):
         """

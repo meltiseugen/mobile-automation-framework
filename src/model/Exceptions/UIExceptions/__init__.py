@@ -50,6 +50,6 @@ class TableChildIndexOutOfRange(UIMainException):
         :param message:
         """
         if message is None:
-            super(TableChildIndexOfRange, self).__init__(self._BASE_MESSAGE)
+            super(TableChildIndexOutOfRange, self).__init__(self._BASE_MESSAGE)
         else:
-            super(TableChildIndexOfRange, self).__init__(message)
+            super(TableChildIndexOutOfRange, self).__init__(message)

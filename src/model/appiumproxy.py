@@ -10,7 +10,7 @@ from src.StaticResources.StaticData import StaticData
 from src.model.base_proxy import BaseProxy
 
 
-class Appium(BaseProxy, object):
+class AppiumProxy(BaseProxy, object):
     """The proxy used for starting and controlling an Appium process.
     It inherits the two methods, start and stop, from the base class BaseProxy.
     The method 'start_appium' is used the start the server and the method 'close'
@@ -32,7 +32,7 @@ class Appium(BaseProxy, object):
         """
         self.__output = output_file
         self.__port = params[params.index("--port")+1]
-        super(Appium, self).__init__(bin, output_file, params)
+        super(AppiumProxy, self).__init__(bin, output_file, params)
 
     def start(self, initial_wait_time=5):
         """
@@ -46,23 +46,9 @@ class Appium(BaseProxy, object):
         PRE-CONDITIONS: N/A.
         POST-CONDITIONS: N/A.
         """
-        if self.__check_prev_run():
-            super(Appium, self).start()
-            time.sleep(initial_wait_time)
-
-        else:
-            print("cleaning and restarting")
-            self.kill_process()
-            super(Appium, self).start()
-            time.sleep(initial_wait_time)
-
-    def __check_prev_run(self):
-        with open(self.__output, "r") as out_file:
-            text = out_file.read()
-            if "error" in text or "Error" in text:
-                print("found error")
-                return False
-        return True
+        self.kill_process()
+        super(AppiumProxy, self).start()
+        time.sleep(initial_wait_time)
 
     def kill_process(self):
         shell_comm = "kill -kill `lsof -t -i tcp:" + self.__port + "`"
@@ -72,20 +58,11 @@ class Appium(BaseProxy, object):
         time.sleep(5)
 
     @staticmethod
-    def get_local_appium():
-        return Appium("node",
+    def get_appium_instance():
+        return AppiumProxy("node",
                       [StaticData.Config.Appium.PATH,
                        "--port", StaticData.Config.Appium.PORT,
                        "--debug-log-spacing"
                        ],
                       StaticData.Paths.OUTPUTS_PATH + "appium-out-file.txt"
                       )
-
-    @staticmethod
-    def get_remote_appium():
-        return Appium("appium",
-                       ["--port", StaticData.Config.Appium.PORT,
-                        "--debug-log-spacing"
-                        ],
-                       StaticData.Paths.OUTPUTS_PATH + "appium-out-file.txt"
-                       )
