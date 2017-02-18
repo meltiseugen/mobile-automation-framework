@@ -1,6 +1,6 @@
 import csv
 
-from src.tr_models.input_model.meta_input_model import Input
+from src.utilities.InputManager.meta_input_model import Input
 
 
 class CsvOperator(Input):

@@ -24,7 +24,7 @@ class ResourceController(object):
         """
         Returns it the requested file exists or not
         :param file_path: path to file
-        :return: boolena
+        :return: boolean
         """
         if os.path.isfile(file_path):
             return True

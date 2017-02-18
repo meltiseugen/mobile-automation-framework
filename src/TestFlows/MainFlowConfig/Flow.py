@@ -1,6 +1,8 @@
 """
 Module that contains the basic Flow class configured to support running custom flows via INHERITANCE.
 """
+import time
+
 from src.controller.MainController import MainController
 
 
@@ -16,9 +18,12 @@ class Flow(object):
         self.platform = platform
         self.controller = MainController(platform)
         self.__start_appium()
+        self.controller.APPIUM.connect()
+        time.sleep(5)
 
     def __start_appium(self):
         self.controller.APPIUM.get_appium_instance().start()
 
     def finalize(self):
+        self.controller.APPIUM.disconnect()
         self.controller.APPIUM.get_appium_instance().close()

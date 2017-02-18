@@ -1,6 +1,8 @@
 """
 Module for degining a UIButton object.
 """
+import time
+
 from src.StaticResources.StaticData import StaticData
 from src.model.UIElements.UIObject import UIObject
 
@@ -22,14 +24,19 @@ class UIButton(UIObject):
 
         :return:
         """
+        if self._element is None:
+            self._set_element()
         if self._element.is_displayed() and self._element.is_enabled():
             self._element.click()
+            time.sleep(1)
 
     def text(self):
         """
 
         :return:
         """
+        if self._element is None:
+            self._set_element()
         if self.__main_controller.CONFIG_COMMANDER.PLATFORM.type == StaticData.Config.ANDROID_PLATFORM_TAG:
             return self._element.text
         elif self.__main_controller.CONFIG_COMMANDER.PLATFORM.type == StaticData.Config.IOS_PLATFORM_TAG:

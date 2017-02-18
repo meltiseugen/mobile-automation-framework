@@ -1,7 +1,6 @@
-from src.tr_models.input_model.csv_input import CsvOperator
-from src.tr_models.input_model.json_input import JsonOperator
-from src.tr_models.input_model.xls_operator import XlsOperator
-from src.tr_models.input_model.xml_operator import XmlOperator
+from src.utilities.InputManager.csv_input import CsvOperator
+from src.utilities.InputManager.json_input import JsonOperator
+from src.utilities.InputManager.xml_operator import XmlOperator
 
 
 class InputModelFactory(object):
@@ -30,15 +29,6 @@ class InputModelFactory(object):
         """
         return XmlOperator()
 
-    def xls_model():
-        """
-        Returns an instance of the XlsOperator class.
-        :param xls_file: xls file to be parsed
-        :return:
-        """
-        return XlsOperator()
-
     json_model = staticmethod(json_model)
     csv_model = staticmethod(csv_model)
     xml_model = staticmethod(xml_model)
-    xls_model = staticmethod(xls_model)

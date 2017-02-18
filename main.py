@@ -1,8 +1,8 @@
 """
 
 """
+from Flows.WalkThroughFlow import WalkThroughFlow
 from src.StaticResources.StaticData import StaticData
-from src.TestFlows.WalkThroughFlow import WalkThroughFlow
 from src.model.Platform import Platform
 
 if __name__ == "__main__":

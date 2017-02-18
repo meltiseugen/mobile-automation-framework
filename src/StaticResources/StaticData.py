@@ -50,7 +50,7 @@ class StaticData(object):
         class Appium(object):
             PATH = "/Applications/Appium.app/Contents/Resources/node_modules/appium/build/lib/main.js"
             PORT = "4444"
-            SERVER_URL = ""
+            SERVER_URL = "http://localhost:" + PORT + "/wd/hub"
 
     class Errors(object):
         """

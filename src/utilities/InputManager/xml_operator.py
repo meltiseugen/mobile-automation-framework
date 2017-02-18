@@ -1,10 +1,10 @@
-from src.tr_models.input_model.meta_input_model import Input
 import xmltodict
 import json
 import os
 from xml.etree import ElementTree as ET
 from xml.etree.ElementTree import ParseError
-from ..dictionaries.base_dictionary import BaseDictionary
+
+from src.utilities.InputManager.meta_input_model import Input
 
 
 class XmlOperator(Input):

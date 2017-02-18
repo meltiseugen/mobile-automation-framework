@@ -20,15 +20,16 @@ class UIObject(object):
         self._element_tag = element_tag
         self._xpath = xpath
         self.__main_controller = controller
-        self.__set_element()
+        self._element = None
 
-    def __set_element(self):
+    def _set_element(self):
         """
 
         :return:
         """
         try:
             self._element = self.__main_controller.APPIUM.get_element(self._element_tag)
+            print(self._element.text)
         except NoSuchUIElement:
             i = 0
             success = False
@@ -45,9 +46,20 @@ class UIObject(object):
                 raise NoSuchUIElement()
 
     def is_visible(self):
+        if self._element is None:
+            try:
+                self._set_element()
+            except NoSuchUIElement:
+                return False
         return self._element.is_displayed()
 
     def is_enabled(self):
+
+        if self._element is None:
+            try:
+                self._set_element()
+            except NoSuchUIElement:
+                return False
         return self._element.is_enabled()
 
     def get_attribute(self, name):
@@ -56,4 +68,6 @@ class UIObject(object):
         :param name:
         :return:
         """
+        if self._element is None:
+            self._set_element()
         return self._element.get_attibute(name)
