@@ -1,15 +1,10 @@
 {
   "iOS": {
-    "app": "/resources/builds/iOS/build3/SpotOn-17_14_Release.ipa",
-    "noReset": "true",
-    "platformName": "iOS",
-    "platformVersion": "9.2",
-    "deviceName": "iPhone iOS 9.3",
-    "udid": "9574d6c8f55b406ebd76c26cd8c34f9dd67fe3f6"
+
   },
 
   "Android": {
-    "app": "/../SpotOn/app/build/outputs/apk/app-debug.apk",
+    "app": "/Users/eugenm/Desktop/app-debug.apk",
     "noReset": "true",
     "platformName": "Android",
     "deviceName": "Galaxy"
