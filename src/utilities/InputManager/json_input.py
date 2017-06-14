@@ -1,29 +1,37 @@
+"""
+Model for reading JSON format files.
+"""
+
 import json
-from .meta_input_model import Input
+
+from src.utilities.InputManager.meta_input_model import Input
 
 
 class JsonOperator(Input):
-    def __init__(self):
-        pass
+    """
+    Model for interacting with JSON files.
+    """
 
     def from_file(self, file_path):
         """
+        Reads a CSV file from a raw text file.
         :param file_path: path for the json file
         """
-        with open(file_path, 'r') as f:
-            json_data = f.read()
+        with open(file_path, 'r') as file_descriptor:
+            json_data = file_descriptor.read()
             try:
                 return json.loads(json_data)
-            except ValueError:
-                print("Not a valid Json")
-                return "None"
 
-    def from_stream(self, json_data):
+            except ValueError:
+                return None
+
+    def from_stream(self, data):
         """
-        :param json_data: the json data to be validated
+        Reads and converts the raw data in CSV format provided as a parameter.
+        :param data: the json data to be validated
         """
         try:
-            return json.loads(json_data)
+            return json.loads(data)
+
         except ValueError:
-            print("Not a valid Json")
-            return "None"
+            return None

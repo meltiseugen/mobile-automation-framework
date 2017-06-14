@@ -49,8 +49,13 @@ class ResourceController(object):
 
     @staticmethod
     def get_files_in_dir(path):
+        """
+        Returns a list of json and xml files from a given directory.
+        :param path: the path to the directory which to scan.
+        :return: a list of file names if of type json or xml.
+        """
         ret_files = []
-        for root, dirs, files in os.walk(path):
+        for root, _, files in os.walk(path):
             for file in files:
                 if ".json" in file or ".xml" in file:
                     ret_files.append(os.path.join(root, file))

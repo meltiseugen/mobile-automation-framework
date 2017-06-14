@@ -1,33 +1,21 @@
-from src.StaticResources.StaticData import StaticData
-from src.model.UIElements.UIObject import UIObject
+"""
+Module for defining a UITableViewChildElement object.
+"""
+from src.model.UIElements.UIBaseElement import UIBaseElement
 
 
-class UITableViewChildElement(UIObject):
+class UITableViewChildElement(UIBaseElement):
     """
     UIButton object definitions.
     """
+
     def __init__(self, controller, element_tag=None, xpath=None):
         """
         Constructor.
-        :param controller:
-        :param element_tag:
+        :param controller: a reference to the main controller.
+        :param element_tag: the tag of the element.
+        :param xpath: teh direct xpath for the element.
         """
+
         super(UITableViewChildElement, self).__init__(controller, element_tag, xpath)
-
-    def click(self):
-        """
-
-        :return:
-        """
-        if self._element.is_displayed() and self._element.is_enabled():
-            self._element.click()
-
-    def text(self):
-        """
-
-        :return:
-        """
-        if self.__main_controller.CONFIG_COMMANDER.PLATFORM.type == StaticData.Config.ANDROID_PLATFORM_TAG:
-            return self._element.text
-        elif self.__main_controller.CONFIG_COMMANDER.PLATFORM.type == StaticData.Config.IOS_PLATFORM_TAG:
-            return self.get_attribute("name")
+        self.__initiated = True

@@ -1,3 +1,7 @@
+"""
+Factory class for input class models.
+"""
+
 from src.utilities.InputManager.csv_input import CsvOperator
 from src.utilities.InputManager.json_input import JsonOperator
 from src.utilities.InputManager.xml_operator import XmlOperator
@@ -8,6 +12,7 @@ class InputModelFactory(object):
     Factory for the Input Model.
     """
 
+    @staticmethod
     def json_model():
         """
         Returns an instance of the JsonOperator class.
@@ -15,6 +20,7 @@ class InputModelFactory(object):
         """
         return JsonOperator()
 
+    @staticmethod
     def csv_model():
         """
         Returns an instance of the CsvOperator class.
@@ -22,13 +28,10 @@ class InputModelFactory(object):
         """
         return CsvOperator()
 
+    @staticmethod
     def xml_model():
         """
         Returns an instance of the XmlOperator class.
         :return: a reference to a XmlOperator instance.
         """
         return XmlOperator()
-
-    json_model = staticmethod(json_model)
-    csv_model = staticmethod(csv_model)
-    xml_model = staticmethod(xml_model)

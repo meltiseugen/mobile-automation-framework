@@ -42,18 +42,10 @@ class BaseProxy(object):
         if self.__output_file is not None:
             print("output file specified")
             with open(self.__output_file, 'w') as out_file:
-                self.__process = subprocess.Popen(shell_comm,
-                                                  shell=True,
-                                                  stdout=out_file,
-                                                  stderr=out_file
-                                                  )
+                self.__process = subprocess.Popen(shell_comm, shell=True, stdout=out_file, stderr=out_file)
         else:
             print("output file NOT specified")
-            self.__process = subprocess.Popen(shell_comm,
-                                              shell=True,
-                                              stdout=subprocess.PIPE,
-                                              stderr=subprocess.PIPE
-                                              )
+            self.__process = subprocess.Popen(shell_comm, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         return self.__process
 
     def close(self):

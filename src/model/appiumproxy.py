@@ -2,11 +2,10 @@
 An API used to directly start and interact with an Appium Process from Python.
 The main class that provides this functionality is the Appium class.
 """
-import os
 import subprocess
 import time
 
-from src.StaticResources.StaticData import StaticData
+from settings import Settings
 from src.model.base_proxy import BaseProxy
 
 
@@ -17,7 +16,7 @@ class AppiumProxy(BaseProxy, object):
     is used to stop the process.
     """
 
-    def __init__(self, bin, params, output_file):
+    def __init__(self, path_to_bin, params, output_file):
         """
         Constructor for instantiating the class Appium. That in its turn calls the
         constructor of the base class.
@@ -31,10 +30,10 @@ class AppiumProxy(BaseProxy, object):
         POST-CONDITIONS: N/A.
         """
         self.__output = output_file
-        self.__port = params[params.index("--port")+1]
-        super(AppiumProxy, self).__init__(bin, output_file, params)
+        self.__port = params[params.index("--port") + 1]
+        super(AppiumProxy, self).__init__(path_to_bin, output_file, params)
 
-    def start(self, initial_wait_time=5):
+    def start(self):
         """
         Method used to start the Appium process using the parameters defined in
         the constructor.
@@ -48,9 +47,12 @@ class AppiumProxy(BaseProxy, object):
         """
         self.kill_process()
         super(AppiumProxy, self).start()
-        time.sleep(initial_wait_time)
+        time.sleep(Settings.Waits.MEDIUM_SLEEP_TIME)
 
     def kill_process(self):
+        """
+        Kill the Appium server.
+        """
         shell_comm = "kill -kill `lsof -t -i tcp:" + self.__port + "`"
         process = subprocess.Popen(shell_comm, shell=True)
         process.communicate()
@@ -59,10 +61,9 @@ class AppiumProxy(BaseProxy, object):
 
     @staticmethod
     def get_appium_instance():
-        return AppiumProxy("node",
-                      [StaticData.Config.Appium.PATH,
-                       "--port", StaticData.Config.Appium.PORT,
-                       "--debug-log-spacing"
-                       ],
-                      StaticData.Paths.OUTPUTS_PATH + "appium-out-file.txt"
-                      )
+        """
+        Return an Appium server interface.
+        :return: returns a proxy for the Appium server
+        """
+        params = [Settings.Config.Appium.PATH, "--port", Settings.Config.Appium.PORT, "--debug-log-spacing"]
+        return AppiumProxy("node", params, Settings.Paths.OUTPUTS_PATH + "appium-out-file.txt")

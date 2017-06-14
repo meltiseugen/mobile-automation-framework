@@ -1,7 +1,7 @@
 """
 Module that holds the main controller.
 """
-from src.StaticResources.StaticData import StaticData
+from settings import Settings
 from src.controller.AppiumController import AppiumController
 from src.controller.ResourceController import ResourceController
 
@@ -12,5 +12,5 @@ class MainController(object):
     """
 
     def __init__(self, platform):
-        self.APPIUM = AppiumController(platform)
-        self.RESOURCE_CONTROLLER = ResourceController(StaticData.Paths.RESOURCE_PATH)
+        self.appium = AppiumController(platform)
+        self.resource_controller = ResourceController(Settings.Paths.RESOURCE_PATH)

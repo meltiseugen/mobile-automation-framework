@@ -1,47 +1,38 @@
 """
-Parser for xml files
-
+Model for reading XLS format files.
 """
-from pandas import *
+
 from xlrd import open_workbook
 
-from src.tr_models.input_model.meta_input_model import Input
+from src.utilities.InputManager.meta_input_model import Input
 
 
 class XlsOperator(Input):
     """
-
-    This class provide xml parsing methods
+    Model for interacting with XLS files.
     """
 
-    def __init__(self):
-        pass
-
-    def from_file(self, data):
+    def from_file(self, file_path):
+        """
+        Reads a XLS file from a raw text file.
         """
 
-        :return: all xls rows
-        """
-        wb = open_workbook(data)
+        work_book = open_workbook(file_path)
         full_content = []
-        for s in wb.sheets():
-            for row in range(s.nrows):
+        for sheet in work_book.sheets():
+
+            for row in range(sheet.nrows):
                 values = []
-                for col in range(s.ncols):
-                    values.append(s.cell(row, col).value)
+                for col in range(sheet.ncols):
+                    values.append(sheet.cell(row, col).value)
+
                 full_content.append(values)
+
         return full_content
 
     def from_stream(self, data):
-        pass
-
-    @staticmethod
-    def to_dict(data):
+        """
+        Reads and converts the raw data in XLS format provided as a parameter.
         """
 
-        convert xls file to dict
-        :return:
-        """
-        xls = ExcelFile(data)
-        df = xls.parse(xls.sheet_names[0])
-        return df.to_dict()
+        raise NotImplementedError()
