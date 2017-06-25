@@ -2,6 +2,7 @@
 Custom exceptions that are used when interactions with system files.
 """
 
+
 class FileMainException(Exception):
     """
     Main Exception class for UiObjects.

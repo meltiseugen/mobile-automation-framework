@@ -1,6 +1,7 @@
 """
 UI element that acts as a container for other elements.
 """
+import time
 
 from settings import Settings
 from src.model.UIElements.UIObject import UIObject
@@ -30,6 +31,7 @@ class UIBaseElement(UIObject):
 
         if self._element.is_displayed() and self._element.is_enabled():
             self._element.click()
+        time.sleep(Settings.Waits.SMALL_SLEEP_TIME)
 
     def text(self):
         """

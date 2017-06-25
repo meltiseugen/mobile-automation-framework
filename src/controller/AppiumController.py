@@ -60,7 +60,6 @@ class AppiumController(object):
         Disconnects from the Appium server.
         """
         self.appium_driver.close_app()
-        self.appium_driver.close()
 
     def __appium_server_connection(self):
         """

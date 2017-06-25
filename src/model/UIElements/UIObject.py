@@ -30,9 +30,7 @@ class UIObject(object):
         """
 
         try:
-            self._element = self.__main_controller.APPIUM.get_element(self._element_tag)
-            print(self._element.text)
-
+            self._element = self.__main_controller.appium.get_element(self._element_tag)
         except NoSuchUIElement:
             # TODO : you know what!
             index_ = 0
@@ -40,7 +38,7 @@ class UIObject(object):
             while index_ < Settings.Errors.RETRY_NUMBER and not success:
                 time.sleep(Settings.Waits.SMALL_SLEEP_TIME)
                 try:
-                    self._element = self.__main_controller.APPIUM.get_element(self._element_tag)
+                    self._element = self.__main_controller.appium.get_element(self._element_tag)
                     success = True
                     break
 

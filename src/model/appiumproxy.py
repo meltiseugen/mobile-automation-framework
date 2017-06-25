@@ -16,7 +16,7 @@ class AppiumProxy(BaseProxy, object):
     is used to stop the process.
     """
 
-    def __init__(self, path_to_bin, params, output_file):
+    def __init__(self, params, output_file):
         """
         Constructor for instantiating the class Appium. That in its turn calls the
         constructor of the base class.
@@ -31,7 +31,7 @@ class AppiumProxy(BaseProxy, object):
         """
         self.__output = output_file
         self.__port = params[params.index("--port") + 1]
-        super(AppiumProxy, self).__init__(path_to_bin, output_file, params)
+        super(AppiumProxy, self).__init__('appium', output_file, params)
 
     def start(self):
         """
@@ -45,18 +45,18 @@ class AppiumProxy(BaseProxy, object):
         PRE-CONDITIONS: N/A.
         POST-CONDITIONS: N/A.
         """
-        self.kill_process()
+        print("Starting Appium service...")
+        self.__kill_process()
         super(AppiumProxy, self).start()
         time.sleep(Settings.Waits.MEDIUM_SLEEP_TIME)
 
-    def kill_process(self):
+    def __kill_process(self):
         """
         Kill the Appium server.
         """
         shell_comm = "kill -kill `lsof -t -i tcp:" + self.__port + "`"
-        process = subprocess.Popen(shell_comm, shell=True)
-        process.communicate()
-        print("killed process")
+        process = subprocess.Popen(shell_comm, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        out, err = process.communicate()
         time.sleep(5)
 
     @staticmethod
@@ -65,5 +65,5 @@ class AppiumProxy(BaseProxy, object):
         Return an Appium server interface.
         :return: returns a proxy for the Appium server
         """
-        params = [Settings.Config.Appium.PATH, "--port", Settings.Config.Appium.PORT, "--debug-log-spacing"]
-        return AppiumProxy("node", params, Settings.Paths.OUTPUTS_PATH + "appium-out-file.txt")
+        params = ["--port", Settings.Config.Appium.PORT, "--debug-log-spacing"]
+        return AppiumProxy(params, Settings.Paths.OUTPUTS_PATH + "appium-out-file.txt")

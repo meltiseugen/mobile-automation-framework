@@ -36,4 +36,5 @@ class Flow(object):
         Part of the tearDown finalize sequence.
         """
         self.controller.appium.disconnect()
+        self.controller.appium.appium_driver.quit()
         self.controller.appium.get_appium_instance().close()

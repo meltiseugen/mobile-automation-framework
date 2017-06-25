@@ -13,3 +13,4 @@ src/model/UIElements/__pycache__/
 src/model/__pycache__/
 src/utilities/InputManager/__pycache__/
 src/utilities/__pycache__/
+__pycache__/

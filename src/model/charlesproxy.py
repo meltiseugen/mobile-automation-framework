@@ -22,22 +22,32 @@ class Charles(BaseProxy):
     SESSION_HAR_FORMAT = "export-har"
     SESSION_CSV_FORMAT = "export-csv"
 
-    def __init__(self, path_to_bin, params, port):
+    __CREATED = False
+
+    def __init__(self, params, port):
         """
         Constructor.
         :param path_to_bin: Path to the charles executable.
         :param params: custom parameters.
         """
-        super(Charles, self).__init__(path_to_bin, None, params)
-        self.__recording = False
-        self.__port = port
+        if self.__CREATED is False:
+            # TODO: fuck this shit up
+            super(Charles, self).__init__("path_to_bin", None, params)
+            self.__recording = False
+            self.__port = port
+            self.__running = False
+        else:
+            pass
 
     def start(self):
         """
         Start the charles server.
         """
-        super(Charles, self).start()
-        time.sleep(Settings.Waits.MEDIUM_SLEEP_TIME)
+        if not self.__running:
+            super(Charles, self).start()
+            time.sleep(Settings.Waits.MEDIUM_SLEEP_TIME)
+        else:
+            return
 
     def record(self):
         """
@@ -60,11 +70,10 @@ class Charles(BaseProxy):
 
         self.__recording = True
 
-    def save_session(self, directory_path, file_name, format_type="export-xml"):
+    def save_session(self, file_path, format_type="export-xml"):
         """
         Saves the current stored session from the charles service to the machine.
-        :param directory_path: the directory where to save the file.
-        :param file_name: the name of the file that will contain the session.
+        :param file_path: the name of the file that will contain the session.
         :param format_type: the type of the format for the data.
                             Use class static fields for other options.
         """
@@ -80,7 +89,7 @@ class Charles(BaseProxy):
                 session_location = Charles.SESSION_HAR_FORMAT
 
             base_comm = "curl -x localhost:" + self.__port + " http://"
-            shell_comm = base_comm + session_location + " -o " + directory_path + "/" + file_name
+            shell_comm = base_comm + session_location + " -o " + file_path
 
             process = subprocess.Popen(shell_comm, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             process.communicate()
