@@ -4,7 +4,7 @@
   },
 
   "Android": {
-    "app": "/Users/eugenm/Desktop/app-debug.apk",
+    "app": "/Users/eugenm/Desktop/apps/spoton/app-debug.apk",
     "noReset": "true",
     "platformName": "Android",
     "deviceName": "Galaxy"

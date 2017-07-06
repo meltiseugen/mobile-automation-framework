@@ -3,17 +3,17 @@
 [Appium]   port: 4444
 [Appium]   debugLogSpacing: true
 [Appium] Appium REST http interface listener started on 0.0.0.0:4444
-[HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"/Users/eugenm/Desktop/app-debug.apk","noReset":"true","platformName":"Android","deviceName":"Galaxy"},"requiredCapabilities":{}}
-[debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"app":"/Users/eugenm/Desktop/app-debug.apk","noReset":"true","platformName":"Android","deviceName":"Galaxy"},{},null,null,null]
+[HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"/Users/eugenm/Desktop/apps/spoton/app-debug.apk","noReset":"true","platformName":"Android","deviceName":"Galaxy"},"requiredCapabilities":{}}
+[debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"app":"/Users/eugenm/Desktop/apps/spoton/app-debug.apk","noReset":"true","platformName":"Android","deviceName":"Galaxy"},{},null,null,null]
 [Appium] Creating new AndroidDriver session
 [Appium] Capabilities:
-[Appium]   app: '/Users/eugenm/Desktop/app-debug.apk'
+[Appium]   app: '/Users/eugenm/Desktop/apps/spoton/app-debug.apk'
 [Appium]   noReset: 'true'
 [Appium]   platformName: 'Android'
 [Appium]   deviceName: 'Galaxy'
 [debug] [AndroidDriver] AndroidDriver version: 1.10.38
 [BaseDriver] Capability 'noReset' changed from string to boolean. This may cause unexpected behavior
-[BaseDriver] Session created with session id: f9d9403d-ecd4-4ffd-89ef-2bd669974a74
+[BaseDriver] Session created with session id: b0c39e5b-72dc-4b32-9420-a58ef0f02c5b
 [debug] [AndroidDriver] Getting Java version
 [AndroidDriver] Java version is: 1.8.0_101
 [ADB] Checking whether adb is present
@@ -26,7 +26,7 @@
 [ADB] Checking whether adb is present
 [ADB] Using adb from /Users/eugenm/Library/Android/sdk/platform-tools/adb
 [debug] [ADB] Setting device id to 83f1353737584859
-[BaseDriver] Using local app '/Users/eugenm/Desktop/app-debug.apk'
+[BaseDriver] Using local app '/Users/eugenm/Desktop/apps/spoton/app-debug.apk'
 [debug] [AndroidDriver] Checking whether app is actually present
 [AndroidDriver] Starting Android session
 [debug] [ADB] Running '/Users/eugenm/Library/Android/sdk/platform-tools/adb' with args: ["-P",5037,"-s","83f1353737584859","wait-for-device"]
@@ -71,7 +71,7 @@
 [debug] [ADB] 1 device(s) connected
 [debug] [ADB] Running '/Users/eugenm/Library/Android/sdk/platform-tools/adb' with args: ["-P",5037,"-s","83f1353737584859","shell","pm","list","packages","-3","com.example.alex.spoton"]
 [debug] [ADB] App is  installed
-[debug] [AndroidDriver] Extracting strings from apk /Users/eugenm/Desktop/app-debug.apk null /var/folders/_p/16r5kvwn6635sfsbcf89fmnn_r4v0p/T/com.example.alex.spoton
+[debug] [AndroidDriver] Extracting strings from apk /Users/eugenm/Desktop/apps/spoton/app-debug.apk null /var/folders/_p/16r5kvwn6635sfsbcf89fmnn_r4v0p/T/com.example.alex.spoton
 [debug] [ADB] Extracting strings for language: default
 [debug] [ADB] Device API level: 24
 [debug] [ADB] Getting connected devices...
@@ -113,11 +113,11 @@
 [debug] [ADB] 1 device(s) connected
 [debug] [ADB] Running '/Users/eugenm/Library/Android/sdk/platform-tools/adb' with args: ["-P",5037,"-s","83f1353737584859","shell","dumpsys","window","windows"]
 [debug] [ADB] Found package: 'com.example.alex.spoton' and activity: '.app.mvp.view.SplashScreenView'
-[Appium] New AndroidDriver session created successfully, session f9d9403d-ecd4-4ffd-89ef-2bd669974a74 added to master session list
-[debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"/Users/eugenm/Desktop/app-debug.apk","noReset":true,"platformName":"Android","deviceName":"Galaxy"},"app":"/Users/eugenm/Desktop/app-debug.apk","noReset":true,"platformName":"Android","deviceName":"83f1353737584859","deviceUDID":"83f1353737584859","platformVersion":"7.0","appPackage":"com.example.alex.spoton","appWaitPackage":"com.example.alex.spoton","appActivity":"com.example.alex.spoton.app.mvp.view.SplashScreenView","appWaitActivity":"com.example.alex.spoton.app.mvp.view.SplashScreenView"}
-[HTTP] <-- POST /wd/hub/session 200 9577 ms - 783 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[Appium] New AndroidDriver session created successfully, session b0c39e5b-72dc-4b32-9420-a58ef0f02c5b added to master session list
+[debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"/Users/eugenm/Desktop/apps/spoton/app-debug.apk","noReset":true,"platformName":"Android","deviceName":"Galaxy"},"app":"/Users/eugenm/Desktop/apps/spoton/app-debug.apk","noReset":true,"platformName":"Android","deviceName":"83f1353737584859","deviceUDID":"83f1353737584859","platformVersion":"7.0","appPackage":"com.example.alex.spoton","appWaitPackage":"com.example.alex.spoton","appActivity":"com.example.alex.spoton.app.mvp.view.SplashScreenView","appWaitActivity":"com.example.alex.spoton.app.mvp.view.SplashScreenView"}
+[HTTP] <-- POST /wd/hub/session 200 11118 ms - 807 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Waiting up to 0 ms for condition
@@ -127,12 +127,12 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Using: UiSelector[CLASS=android.widget.Button, INSTANCE=0]
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"ELEMENT":"1"}}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"1"}
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 200 112 ms - 87 
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"ELEMENT":"1"}}
-[HTTP] --> GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/1/displayed {}
-[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["1","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 200 181 ms - 87 
+[HTTP] --> GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/1/displayed {}
+[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["1","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"1"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"1"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
@@ -140,9 +140,9 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.elementDisplayed() result: true
-[HTTP] <-- GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/1/displayed 200 15 ms - 76 
-[HTTP] --> GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/1/enabled {}
-[debug] [MJSONWP] Calling AppiumDriver.elementEnabled() with args: ["1","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/1/displayed 200 43 ms - 76 
+[HTTP] --> GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/1/enabled {}
+[debug] [MJSONWP] Calling AppiumDriver.elementEnabled() with args: ["1","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"1"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"1"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
@@ -150,19 +150,19 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.elementEnabled() result: true
-[HTTP] <-- GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/1/enabled 200 12 ms - 76 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/1/click {"id":"1","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.click() with args: ["1","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/1/enabled 200 15 ms - 76 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/1/click {"id":"1","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.click() with args: ["1","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"1"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"1"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.click() result: true
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/1/click 200 188 ms - 76 
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.LinearLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.LinearLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/1/click 200 230 ms - 76 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.LinearLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.LinearLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Waiting up to 0 ms for condition
@@ -175,9 +175,9 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"ELEMENT":"2"}}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"2"}
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 200 166 ms - 87 
-[HTTP] --> GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/2/displayed {}
-[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["2","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 200 183 ms - 87 
+[HTTP] --> GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/2/displayed {}
+[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["2","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"2"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"2"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
@@ -185,19 +185,19 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.elementDisplayed() result: true
-[HTTP] <-- GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/2/displayed 200 37 ms - 76 
-[HTTP] --> GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/2/enabled {}
-[debug] [MJSONWP] Calling AppiumDriver.elementEnabled() with args: ["2","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/2/displayed 200 37 ms - 76 
+[HTTP] --> GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/2/enabled {}
+[debug] [MJSONWP] Calling AppiumDriver.elementEnabled() with args: ["2","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"2"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"2"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getAttribute
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.elementEnabled() result: true
-[HTTP] <-- GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/2/enabled 200 22 ms - 76 
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/2/click {"id":"2","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.click() with args: ["2","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/2/enabled 200 69 ms - 76 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/2/click {"id":"2","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.click() with args: ["2","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"2"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"2"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
@@ -205,9 +205,9 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.click() result: true
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/2/click 200 173 ms - 76 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/2/click 200 214 ms - 76 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Waiting up to 0 ms for condition
@@ -218,9 +218,9 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
 [debug] [AndroidBootstrap] Received command result from bootstrap
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 500 96 ms - 164 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 500 93 ms - 164 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Waiting up to 0 ms for condition
@@ -231,9 +231,9 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
 [debug] [AndroidBootstrap] Received command result from bootstrap
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 500 73 ms - 164 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 500 78 ms - 164 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Waiting up to 0 ms for condition
@@ -244,9 +244,9 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
 [debug] [AndroidBootstrap] Received command result from bootstrap
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 500 68 ms - 164 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 500 62 ms - 164 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Waiting up to 0 ms for condition
@@ -255,11 +255,11 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
 [debug] [AndroidBootstrap] Received command result from bootstrap
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 500 75 ms - 164 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[2]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[2]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 500 52 ms - 164 
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[2]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[2]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Waiting up to 0 ms for condition
@@ -272,91 +272,9 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"ELEMENT":"3"}}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"3"}
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 200 54 ms - 87 
-[HTTP] --> GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/displayed {}
-[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["3","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"3"}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"3"}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getAttribute
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [MJSONWP] Responding to client with driver.elementDisplayed() result: true
-[HTTP] <-- GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/displayed 200 15 ms - 76 
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
-[HTTP] --> GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/enabled {}
-[debug] [MJSONWP] Calling AppiumDriver.elementEnabled() with args: ["3","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"3"}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"3"}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getAttribute
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [MJSONWP] Responding to client with driver.elementEnabled() result: true
-[HTTP] <-- GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/enabled 200 35 ms - 76 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/click {"id":"3","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.click() with args: ["3","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"3"}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"3"}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [MJSONWP] Responding to client with driver.click() result: true
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/click 200 169 ms - 76 
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Waiting up to 0 ms for condition
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 500 95 ms - 164 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Waiting up to 0 ms for condition
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 500 83 ms - 164 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Waiting up to 0 ms for condition
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 500 61 ms - 164 
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Waiting up to 0 ms for condition
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 500 61 ms - 164 
-[HTTP] --> GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/displayed {}
-[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["3","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 200 102 ms - 87 
+[HTTP] --> GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/displayed {}
+[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["3","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"3"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"3"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
@@ -364,9 +282,9 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.elementDisplayed() result: true
-[HTTP] <-- GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/displayed 200 60 ms - 76 
-[HTTP] --> GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/enabled {}
-[debug] [MJSONWP] Calling AppiumDriver.elementEnabled() with args: ["3","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/displayed 200 22 ms - 76 
+[HTTP] --> GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/enabled {}
+[debug] [MJSONWP] Calling AppiumDriver.elementEnabled() with args: ["3","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"3"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"3"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
@@ -374,19 +292,58 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.elementEnabled() result: true
-[HTTP] <-- GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/enabled 200 21 ms - 76 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/click {"id":"3","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.click() with args: ["3","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/enabled 200 35 ms - 76 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/click {"id":"3","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.click() with args: ["3","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"3"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"3"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.click() result: true
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/click 200 141 ms - 76 
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/click 200 182 ms - 76 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Waiting up to 0 ms for condition
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 500 103 ms - 164 
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Waiting up to 0 ms for condition
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 500 70 ms - 164 
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Waiting up to 0 ms for condition
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 500 63 ms - 164 
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Waiting up to 0 ms for condition
@@ -397,48 +354,9 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
 [debug] [AndroidBootstrap] Received command result from bootstrap
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 500 74 ms - 164 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Waiting up to 0 ms for condition
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 500 88 ms - 164 
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Waiting up to 0 ms for condition
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 500 71 ms - 164 
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-[debug] [BaseDriver] Waiting up to 0 ms for condition
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 500 79 ms - 164 
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
-[HTTP] --> GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/displayed {}
-[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["3","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 500 92 ms - 164 
+[HTTP] --> GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/displayed {}
+[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["3","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"3"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"3"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
@@ -446,9 +364,9 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.elementDisplayed() result: true
-[HTTP] <-- GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/displayed 200 70 ms - 76 
-[HTTP] --> GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/enabled {}
-[debug] [MJSONWP] Calling AppiumDriver.elementEnabled() with args: ["3","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/displayed 200 23 ms - 76 
+[HTTP] --> GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/enabled {}
+[debug] [MJSONWP] Calling AppiumDriver.elementEnabled() with args: ["3","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"3"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"3"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
@@ -456,19 +374,101 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.elementEnabled() result: true
-[HTTP] <-- GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/enabled 200 35 ms - 76 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/click {"id":"3","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.click() with args: ["3","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/enabled 200 64 ms - 76 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/click {"id":"3","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.click() with args: ["3","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"3"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"3"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.click() result: true
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/3/click 200 163 ms - 76 
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/click 200 187 ms - 76 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Waiting up to 0 ms for condition
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 500 97 ms - 164 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Waiting up to 0 ms for condition
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 500 88 ms - 164 
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Waiting up to 0 ms for condition
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 500 68 ms - 164 
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+[debug] [BaseDriver] Waiting up to 0 ms for condition
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","context":"","multiple":false}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: find
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Finding '//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]' using 'XPATH' with the contextId: '' multiple: false
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 500 77 ms - 164 
+[HTTP] --> GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/displayed {}
+[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["3","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"3"}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"3"}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getAttribute
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[debug] [MJSONWP] Responding to client with driver.elementDisplayed() result: true
+[HTTP] <-- GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/displayed 200 16 ms - 76 
+[HTTP] --> GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/enabled {}
+[debug] [MJSONWP] Calling AppiumDriver.elementEnabled() with args: ["3","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"3"}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"3"}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getAttribute
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[debug] [MJSONWP] Responding to client with driver.elementEnabled() result: true
+[HTTP] <-- GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/enabled 200 54 ms - 76 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/click {"id":"3","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.click() with args: ["3","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"3"}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"3"}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[debug] [MJSONWP] Responding to client with driver.click() result: true
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/3/click 200 163 ms - 76 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element {"using":"xpath","value":"//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
 [debug] [BaseDriver] Waiting up to 0 ms for condition
@@ -481,19 +481,9 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":{"ELEMENT":"4"}}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"4"}
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element 200 92 ms - 87 
-[HTTP] --> GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/4/displayed {}
-[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["4","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"4"}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"4"}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getAttribute
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [MJSONWP] Responding to client with driver.elementDisplayed() result: true
-[HTTP] <-- GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/4/displayed 200 19 ms - 76 
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
-[HTTP] --> GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/4/displayed {}
-[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["4","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element 200 135 ms - 87 
+[HTTP] --> GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/4/displayed {}
+[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["4","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"4"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"4"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
@@ -501,9 +491,19 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.elementDisplayed() result: true
-[HTTP] <-- GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/4/displayed 200 27 ms - 76 
-[HTTP] --> GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/4/enabled {}
-[debug] [MJSONWP] Calling AppiumDriver.elementEnabled() with args: ["4","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/4/displayed 200 72 ms - 76 
+[HTTP] --> GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/4/displayed {}
+[debug] [MJSONWP] Calling AppiumDriver.elementDisplayed() with args: ["4","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
+[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"4"}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"displayed","elementId":"4"}}
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: getAttribute
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
+[debug] [AndroidBootstrap] Received command result from bootstrap
+[debug] [MJSONWP] Responding to client with driver.elementDisplayed() result: true
+[HTTP] <-- GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/4/displayed 200 39 ms - 76 
+[HTTP] --> GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/4/enabled {}
+[debug] [MJSONWP] Calling AppiumDriver.elementEnabled() with args: ["4","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"4"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:getAttribute","params":{"attribute":"enabled","elementId":"4"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
@@ -511,26 +511,26 @@
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"true"}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.elementEnabled() result: true
-[HTTP] <-- GET /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/4/enabled 200 26 ms - 76 
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/4/click {"id":"4","sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.click() with args: ["4","f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- GET /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/4/enabled 200 42 ms - 76 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/4/click {"id":"4","sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.click() with args: ["4","b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
 [AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: click
+[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [MJSONWP] Responding to client with driver.click() result: true
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/element/4/click 200 355 ms - 76 
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":true}
-[HTTP] --> POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/appium/app/close {"sessionId":"f9d9403d-ecd4-4ffd-89ef-2bd669974a74"}
-[debug] [MJSONWP] Calling AppiumDriver.closeApp() with args: ["f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/element/4/click 200 320 ms - 76 
+[HTTP] --> POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/appium/app/close {"sessionId":"b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"}
+[debug] [MJSONWP] Calling AppiumDriver.closeApp() with args: ["b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [ADB] Getting connected devices...
 [debug] [ADB] 1 device(s) connected
 [debug] [ADB] Running '/Users/eugenm/Library/Android/sdk/platform-tools/adb' with args: ["-P",5037,"-s","83f1353737584859","shell","am","force-stop","com.example.alex.spoton"]
 [debug] [MJSONWP] Responding to client with driver.closeApp() result: null
-[HTTP] <-- POST /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74/appium/app/close 200 801 ms - 76 
-[HTTP] --> DELETE /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74 {}
-[debug] [MJSONWP] Calling AppiumDriver.deleteSession() with args: ["f9d9403d-ecd4-4ffd-89ef-2bd669974a74"]
+[HTTP] <-- POST /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b/appium/app/close 200 1064 ms - 76 
+[HTTP] --> DELETE /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b {}
+[debug] [MJSONWP] Calling AppiumDriver.deleteSession() with args: ["b0c39e5b-72dc-4b32-9420-a58ef0f02c5b"]
 [debug] [AndroidDriver] Shutting down Android driver
 [debug] [ADB] Getting connected devices...
 [debug] [ADB] 1 device(s) connected
@@ -544,16 +544,6 @@
 [debug] [AndroidBootstrap] Received command result from bootstrap
 [debug] [UiAutomator] Shutting down UiAutomator
 [debug] [UiAutomator] Moving to state 'stopping'
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type SHUTDOWN
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"OK, shutting down"}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Closed client connection
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: numtests=1
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: stream=.
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: test=testRunServer
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: current=1
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS_CODE: 0
 [debug] [UiAutomator] UiAutomator shut down normally
 [debug] [UiAutomator] Moving to state 'stopped'
 [debug] [ADB] Attempting to kill all uiautomator processes
@@ -568,8 +558,8 @@
 [debug] [ADB] Running '/Users/eugenm/Library/Android/sdk/platform-tools/adb' with args: ["-P",5037,"-s","83f1353737584859","shell","am","force-stop","io.appium.unlock"]
 [debug] [Logcat] Stopping logcat capture
 [debug] [AndroidDriver] Not cleaning generated files. Add `clearSystemFiles` capability if wanted.
-[Appium] Removing session f9d9403d-ecd4-4ffd-89ef-2bd669974a74 from our master session list
+[Appium] Removing session b0c39e5b-72dc-4b32-9420-a58ef0f02c5b from our master session list
 [debug] [MJSONWP] Received response: null
 [debug] [MJSONWP] But deleting session, so not returning
 [debug] [MJSONWP] Responding to client with driver.deleteSession() result: null
-[HTTP] <-- DELETE /wd/hub/session/f9d9403d-ecd4-4ffd-89ef-2bd669974a74 200 2338 ms - 76 
+[HTTP] <-- DELETE /wd/hub/session/b0c39e5b-72dc-4b32-9420-a58ef0f02c5b 200 3169 ms - 76 

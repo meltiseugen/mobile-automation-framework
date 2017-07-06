@@ -1,5 +1,5 @@
 """
-
+Test module regarding walk-through feature
 """
 from settings import Settings
 from src.TestFlows.MainFlowConfig.Flow import Flow
@@ -18,13 +18,15 @@ class WalkThroughFlow(Flow):
     def __init__(self):
         """
         setUp method.
-        :param platform: the type of platform on which to run the test (Android or iOS)
         """
         platform = Platform(Settings.Config.ANDROID_PLATFORM_TAG)
         super().__init__(platform)
 
     @test_case("SP-0001")
     def test1(self, **kwargs):
+        """
+        Test case validating the number of walk-through pages.
+        """
         menu_button = UIButton(self.controller, "B_menu")
         walk_through_button = UIButton(self.controller, "B_walkthrough_loggedout")
         walk_through_next_button = UIButton(self.controller, "B_walkthrough_next")
@@ -32,8 +34,11 @@ class WalkThroughFlow(Flow):
 
         menu_button.click()
         walk_through_button.click()
+        pages_counter = 0
         while not walk_through_done_button.is_visible():
             walk_through_next_button.click()
+            pages_counter += 1
+        assert pages_counter == kwargs['test_data']['number of pages']
         walk_through_done_button.click()
 
-        self.finalize()  # tearDown method
+        self.finalize()
