@@ -56,7 +56,7 @@ class AppiumProxy(BaseProxy, object):
         """
         shell_comm = "kill -kill `lsof -t -i tcp:" + self.__port + "`"
         process = subprocess.Popen(shell_comm, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        out, err = process.communicate()
+        _, __ = process.communicate()
         time.sleep(5)
 
     @staticmethod

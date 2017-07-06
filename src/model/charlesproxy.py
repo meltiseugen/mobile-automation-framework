@@ -31,7 +31,6 @@ class Charles(BaseProxy):
         :param params: custom parameters.
         """
         if self.__CREATED is False:
-            # TODO: fuck this shit up
             super(Charles, self).__init__("path_to_bin", None, params)
             self.__recording = False
             self.__port = port

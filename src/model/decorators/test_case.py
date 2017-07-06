@@ -1,3 +1,7 @@
+"""
+Implementation of the test case decorator.
+"""
+
 import json
 
 import sys
@@ -34,8 +38,8 @@ def test_case(name):
                     print("****** Error ******", file=sys.stderr)
                     traceback.print_stack()
                     print("Test data for " + name + " not found!", file=sys.stderr)
-                except Exception as _:
-                    print("****** Error ******", file=sys.stderr)
+                except Exception as ex:
+                    print("****** Error ******\n\t"+str(ex), file=sys.stderr)
                     traceback.print_stack()
         return wrapper
     return decorator

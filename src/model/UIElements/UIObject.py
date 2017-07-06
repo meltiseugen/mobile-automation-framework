@@ -32,7 +32,6 @@ class UIObject(object):
         try:
             self._element = self.__main_controller.appium.get_element(self._element_tag)
         except NoSuchUIElement:
-            # TODO : you know what!
             index_ = 0
             success = False
             while index_ < Settings.Errors.RETRY_NUMBER and not success:

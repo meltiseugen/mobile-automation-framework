@@ -1,3 +1,7 @@
+"""
+Implementation of the test suite decorator.
+"""
+
 import inspect
 
 
@@ -10,7 +14,14 @@ def test_suite(test_suite_id: str):
     :param test_suite_id: the name/id of the suite
     """
     def decorator(cls):
+        """
+        Decorator for the class
+        :param cls: a pinter to the class
+        """
         class Wrapper(object):
+            """
+            Wrapper over the class in order to change the behaviour.
+            """
             def __init__(self):
                 print("Launch Suite: " + test_suite_id)
                 self.wrapped = cls()

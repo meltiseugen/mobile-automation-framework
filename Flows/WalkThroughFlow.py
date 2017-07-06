@@ -8,6 +8,8 @@ from src.model.decorators.test_case import test_case
 from src.model.decorators.test_suite import test_suite
 from src.model.platform import Platform
 
+from ui import UI
+
 
 @test_suite("WalkThrough")
 class WalkThroughFlow(Flow):
@@ -27,10 +29,10 @@ class WalkThroughFlow(Flow):
         """
         Test case validating the number of walk-through pages.
         """
-        menu_button = UIButton(self.controller, "B_menu")
-        walk_through_button = UIButton(self.controller, "B_walkthrough_loggedout")
-        walk_through_next_button = UIButton(self.controller, "B_walkthrough_next")
-        walk_through_done_button = UIButton(self.controller, "B_walkthrough_start")
+        menu_button = UIButton(self.controller, UI.MENU_BUTTON_TAG)
+        walk_through_button = UIButton(self.controller, UI.WALKTHROUGH_BUTTON_TAG)
+        walk_through_next_button = UIButton(self.controller, UI.WALKTHROUGH_NEXT_TAG)
+        walk_through_done_button = UIButton(self.controller, UI.WALKTHROUGH_DONE_TAG)
 
         menu_button.click()
         walk_through_button.click()
