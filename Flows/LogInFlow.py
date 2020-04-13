@@ -5,10 +5,11 @@ from settings import Settings
 from src.TestFlows.MainFlowConfig.Flow import Flow
 from src.model.UIElements.UIButton import UIButton
 from src.model.UIElements.UITextBox import UITextBox
+from src.model.decorators.test_case import test_case
+from src.model.decorators.test_suite import test_suite
 from src.model.platform import Platform
 
 
-@threaded()
 @test_suite("Login")
 class LogInFlow(Flow):
     """
