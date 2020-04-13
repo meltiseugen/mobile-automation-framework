@@ -1,3 +1,5 @@
+# A QA automation framework for mobile testing 
+
 This is a QA automation framework designed for testing mobile applications
 running on Android and iOS.
 
