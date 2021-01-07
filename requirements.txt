@@ -2,5 +2,5 @@ xlrd
 pandas
 xmltodict
 Appium-Python-Client
-lxml==3.7.2
+lxml==4.6.2
 selenium==3.0.2
